@@ -27,6 +27,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@kota-yata/miller-rabin@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@kota-yata/miller-rabin/-/miller-rabin-1.0.0.tgz#2074c0cc7727de58f5f17f814c9a177c10d627f7"
+  integrity sha512-0CQ0Cy3390W59F3ZTBfOrRKBq8lUH7zn8p/JAM4LDuC0mm900pPX0mqINeDOaAXbybxuh0HuXQqSPkukOjzAyw==
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"
