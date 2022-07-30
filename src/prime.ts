@@ -1,6 +1,6 @@
 import neornd from "neornd";
 import { testPrimality } from '@kota-yata/miller-rabin';
-import { gcd } from "./utils/gcd";
+import { gcd } from "./utils/bigintMath";
 
 export const generatePrime = (byteLength: number): bigint => {
   let bigint: bigint = neornd.bigint(byteLength, byteLength);
