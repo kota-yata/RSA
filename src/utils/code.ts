@@ -1,8 +1,6 @@
 export const toUTF8Code = (str: string): bigint => {
-  const encoder = new TextEncoder();
-  const array: Uint8Array = encoder.encode(str);
-  const buffer: Buffer = Buffer.from(array);
-  return BigInt(buffer.readUintLE(0, array.length));
+  const buffer: Buffer = Buffer.from(str);
+  return BigInt(`0x${buffer.toString('hex')}`);
 };
 
 export const fromUTF8Code = (code: bigint): string => {
@@ -12,7 +10,7 @@ export const fromUTF8Code = (code: bigint): string => {
     codeArray.push(byte);
     code = code >> 8n;
   }
-  const uInt8Array = new Uint8Array(codeArray);
+  const uInt8Array = new Uint8Array(codeArray.reverse());
   const decoder = new TextDecoder('utf-8');
   const result = decoder.decode(uInt8Array);
   return result;
